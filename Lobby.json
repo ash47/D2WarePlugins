@@ -1,0 +1,69 @@
+{
+	"mainFields": ["Mixer"], 
+	"fields": {
+		"Mixer": {
+			"type": "select",
+			"options":	[
+				"Mixer Mode (Ignore Other Settings)",
+				"Manual Mode"
+			]
+		},
+		
+		"Fountain Camping": {
+			"type": "select",
+			"options":	[
+				"No Fountain Camping",
+				"Allow Fountain Camping"
+			]
+		},
+		
+		"Creeps": {
+			"type": "select",
+			"options":	[
+				"Default Happy Creeps",
+				"Angry Creeps"
+			]
+		},
+		
+		"Happy Creeps": {
+			"type": "select",
+			"options":	[
+				"Default Creeps",
+				"Hard Creeps",
+				"No Creeps"
+			]
+		},
+		
+		"Game Length": {
+			"type": "select",
+			"options":	[
+				"Normal Game",
+				"Early Game"
+			]
+		},
+		
+		"Hero Vision": {
+			"type": "select",
+			"options":	[
+				"Normal Hero Vision",
+				"No Hero Vision"
+			]
+		},
+		
+		"Buying": {
+			"type": "select",
+			"options":	[
+				"Default Buying",
+				"No Buying"
+			]
+		},
+		
+		"WTF Mode": {
+			"type": "select",
+			"options":	[
+				"WTF Disabled",
+				"WTF Mode Enabled"
+			]
+		}
+	}
+}
