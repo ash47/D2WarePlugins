@@ -1,5 +1,5 @@
 {
-	"mainFields": ["Mixer"], 
+	"mainFields": [], 
 	"fields": {
 		"Mixer": {
 			"type": "select",
