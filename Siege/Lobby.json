@@ -1,0 +1,58 @@
+{
+	"mainFields": [], 
+	"fields": {
+		"Bonus Stats": {
+			"type": "select",
+			"options":	[
+				"+1 Team Stats on Last Hit",
+				"+2 Team Stats on Last Hit",
+				"+5 Team Stats on Last Hit",
+				"+10 Team Stats on Last Hit",
+				"No Bonus Team Stats"
+			]
+		},
+		
+		"Remove Stats": {
+			"type": "select",
+			"options":	[
+				"No Negative Enemy Stats",
+				"-1 Enemy Stats on Last Hit",
+				"-2 Enemy Stats on Last Hit",
+				"-5 Enemy Stats on Last Hit",
+				"-10 Enemy Stats on Last Hit"
+			]
+		},
+		
+		"Bonus Gold": {
+			"type": "select",
+			"options":	[
+				"No Bonus Team Gold",
+				"+1 Team Gold on Last Hit",
+				"+5 Team Gold on Last Hit",
+				"+10 Team Gold on Last Hit",
+				"+15 Team Gold on Last Hit",
+				"+25 Team Gold on Last Hit",
+				"+50 Team Gold on Last Hit"
+			]
+		},
+		
+		"Tower Multiplier": {
+			"type": "select",
+			"options":	[
+				"10X Tower Multiplier",
+				"5X Tower Multiplier",
+				"1X Tower Multiplier"
+			]
+		},
+		
+		"Hero Multiplier": {
+			"type": "select",
+			"options":	[
+				"1X Hero Multiplier",
+				"2X Hero Multiplier",
+				"5X Hero Multiplier",
+				"10X Hero Multiplier"
+			]
+		}
+	}
+}
