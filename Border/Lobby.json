@@ -1,0 +1,14 @@
+{
+	"mainFields": [], 
+	"fields": {
+		"Captures To Win": {
+			"type": "select",
+			"options":	[
+				"10 Captures",
+				"15 Captures",
+				"25 Captures",
+				"50 Captures"
+			]
+		}
+	}
+}
