@@ -1,0 +1,112 @@
+{
+	"mainFields": ["Cycle Time"], 
+	"fields": {
+		"Cycle Time": {
+			"type": "select",
+			"options":	[
+				"0:30",
+				"0:15",
+				"0:10",
+				"0:45",
+				"1:00",
+				"1:15",
+				"1:30",
+				"1:45",
+				"2:00",
+				"2:15",
+				"2:30",
+				"2:45",
+				"3:00",
+				"4:00",
+				"5:00",
+				"10:00",
+				"Don't Cycle on Timers"
+			]
+		},
+		
+		"Kill Death Cycle": {
+			"type": "select",
+			"options":	[
+				"Don't Cycle on Kills or Deaths",
+				"Cycle on Kills",
+				"Cycle on Kills & Deaths",
+				"Cycle on Deaths"
+			]
+		},
+		
+		"Manual Cycling": {
+			"type": "select",
+			"options":	[
+				"Disallow Manual Cycling",
+				"Free Manual Cycling",
+				"50g Manual Cycling",
+				"150g Manual Cycling",
+				"250g Manual Cycling",
+				"500g Manual Cycling",
+				"1000g Manual Cycling"
+			]
+		},
+		
+		"Skill Set": {
+			"type": "select",
+			"options":	[
+				"Skills and Ults",
+				"Skills Only",
+				"Ults Only",
+				"3 Skills, 1 Ult",
+				"Only Passives",
+				"Only AOE",
+				"Only Point Target",
+				"Only Target",
+				"Only No Target"
+			]
+		},
+		
+		"Starting Skills": {
+			"type": "select",
+			"options":	[
+				"1 Starting Skill",
+				"2 Starting Skills",
+				"3 Starting Skills",
+				"4 Starting Skills",
+				"No Starting Skills",
+				"Original Skills"
+			]
+		},
+		
+		"Combination": {
+			"type": "select",
+			"options":	[
+				"Any Combination",
+				"Unique Skills",
+				"Global Unique Skills"
+			]
+		},
+		
+		"Scaling": {
+			"type": "select",
+			"options":	[
+				"Max Out Skills",
+				"Scale On Hero Level",
+				"Scale On Average Hero Level",
+				"Scale On Highest Hero Level"
+			]
+		},
+		
+		"Stacking": {
+			"type": "select",
+			"options":	[
+				"Remove Passives",
+				"Stack Passives"
+			]
+		},
+		
+		"Cooldown": {
+			"type": "select",
+			"options":	[
+				"Cooldown New Abilities",
+				"Preserve Cooldowns"
+			]
+		}
+	}
+}
