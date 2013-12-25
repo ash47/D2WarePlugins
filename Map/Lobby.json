@@ -1,0 +1,12 @@
+{
+	"mainFields": ["Map"], 
+	"fields": {
+		"Map": {
+			"type": "select",
+			"options":	[
+				"Winter Map",
+				"Autumn Map"
+			]
+		}
+	}
+}

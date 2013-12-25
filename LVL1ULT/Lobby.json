@@ -1,0 +1,32 @@
+{
+	"mainFields": ["Level"], 
+	"fields": {
+		"Level": {
+			"type": "select",
+			"options":	[
+				"Level 1",
+				"Level 2",
+				"Level 3"
+			]
+		},
+		
+		"Scepter": {
+			"type": "select",
+			"options":	[
+				"No Free Scepter",
+				"Level 4 Free Scepter",
+				"Level 3 Free Scepter",
+				"Level 2 Free Scepter",
+				"Level 1 Free Scepter"
+			]
+		},
+		
+		"Force Ult Points": {
+			"type": "select",
+			"options":	[
+				"Force Ult Points",
+				"Wait 15 Seconds For Ults"
+			]
+		}
+	}
+}
