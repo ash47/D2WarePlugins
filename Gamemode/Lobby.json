@@ -1,0 +1,88 @@
+{
+	"mainFields": ["Game Mode"], 
+	"fields": {
+		"Game Mode": {
+			"type": "select",
+			"options":	[
+				"Diretide",
+				"The Greeviling",
+				"Captain's Mode",
+				"Random Draft",
+				"Single Draft",
+				"All Random",
+				"Heroes for Beginners",
+				"Reverse Captain's Mode",
+				"Mid Only",
+				"New Player Pool",
+				"Auto Draft"
+			]
+		},
+		
+		"Diretide Part 1 Timer": {
+			"type": "select",
+			"options":	[
+				"Diretide 8:00 Part 1",
+				"Diretide 0:00 Part 1",
+				"Diretide 1:00 Part 1",
+				"Diretide 2:00 Part 1",
+				"Diretide 3:00 Part 1",
+				"Diretide 4:00 Part 1",
+				"Diretide 5:00 Part 1",
+				"Diretide 6:00 Part 1",
+				"Diretide 7:00 Part 1",
+				"Diretide 8:00 Part 1",
+				"Diretide 9:00 Part 1",
+				"Diretide 10:00 Part 1",
+				"Diretide 11:00 Part 1",
+				"Diretide 12:00 Part 1",
+				"Diretide 13:00 Part 1",
+				"Diretide 14:00 Part 1",
+				"Diretide 15:00 Part 1",
+				"Diretide 20:00 Part 1",
+				"Diretide 25:00 Part 1",
+				"Diretide 30:00 Part 1",
+				"Diretide 45:00 Part 1",
+				"Diretide 60:00 Part 1"
+			]
+		},
+		
+		"Diretide Part 2 Timer": {
+			"type": "select",
+			"options":	[
+				"Diretide 8:00 Part 2",
+				"Diretide 0:00 Part 2",
+				"Diretide 1:00 Part 2",
+				"Diretide 2:00 Part 2",
+				"Diretide 3:00 Part 2",
+				"Diretide 4:00 Part 2",
+				"Diretide 5:00 Part 2",
+				"Diretide 6:00 Part 2",
+				"Diretide 7:00 Part 2",
+				"Diretide 8:00 Part 2",
+				"Diretide 9:00 Part 2",
+				"Diretide 10:00 Part 2",
+				"Diretide 11:00 Part 2",
+				"Diretide 12:00 Part 2",
+				"Diretide 13:00 Part 2",
+				"Diretide 14:00 Part 2",
+				"Diretide 15:00 Part 2",
+				"Diretide 20:00 Part 2",
+				"Diretide 25:00 Part 2",
+				"Diretide 30:00 Part 2",
+				"Diretide 45:00 Part 2",
+				"Diretide 60:00 Part 2"
+			]
+		}//,
+		
+		//"Diretide Roshan Scaler": {
+		//	"type": "select",
+		//	"options":	[
+		//		"Diretide Roshan 1.0x HP (Normal)",
+		//		"Diretide Roshan 1.5x HP (Hard)",
+		//		"Diretide Roshan 0.5x HP (Much Easier)",
+		//		"Diretide Roshan 0.1x HP (Very Easy)",
+		//		"Diretide Roshan 0.01x HP (Instant Kill)"
+		//	]
+		//}
+	}
+}

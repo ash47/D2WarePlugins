@@ -1,0 +1,267 @@
+{
+	"mainFields": [], 
+	"fields": {
+		"Respawn Multiplier": {
+			"type": "select",
+			"options":	[
+				"Default Respawn",
+				"2X Faster Respawn",
+				"3X Faster Respawn",
+				"4X Faster Respawn",
+				"5X Faster Respawn",
+				"10X Faster Respawn",
+				"1 second Respawn",
+				"3 second Respawn",
+				"5 second Respawn",
+				"10 second Respawn",
+				"Instant Respawn"
+			]
+		},
+		
+		"Cooldown Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Skill Cooldown",
+				"2X Faster Skill Cooldown",
+				"3X Faster Skill Cooldown",
+				"4X Faster Skill Cooldown",
+				"5X Faster Skill Cooldown",
+				"10X Faster Skill Cooldown",
+				"2X Slower Skill Cooldown",
+				"3X Slower Skill Cooldown",
+				"4X Slower Skill Cooldown",
+				"5X Slower Skill Cooldown",
+				"10X Slower Skill Cooldown",
+				"1 second Skill Cooldown",
+				"3 second Skill Cooldown",
+				"5 second Skill Cooldown",
+				"10 second Skill Cooldown",
+				"Instant Skill Cooldown"
+			]
+		},
+		
+		"Ignore game breaking cooldowns": {
+			"type": "select",
+			"options":	[
+				"Ignore game breaking cooldowns",
+				"Change all cooldowns"
+			]
+		},
+		
+		"Mana Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Spell Manacost",
+				"2X Less Spell Manacost",
+				"3X Less Spell Manacost",
+				"4X Less Spell Manacost",
+				"5X Less Spell Manacost",
+				"10X Less Spell Manacost",
+				"2X More Spell Manacost",
+				"3X More Spell Manacost",
+				"4X More Spell Manacost",
+				"5X More Spell Manacost",
+				"10X More Spell Manacost",
+				"No Spell Manacost"
+			]
+		},
+		
+		"Spell Value Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Spell Values",
+				"+1 Level Spell Values",
+				"+2 Levels Spell Values",
+				"+3 Levels Spell Values",
+				"+4 Levels Spell Values",
+				"+5 Levels Spell Values",
+				"+6 Levels Spell Values",
+				"+7 Levels Spell Values",
+				"+8 Levels Spell Values",
+				"+9 Levels Spell Values",
+				"+10 Levels Spell Values"
+			]
+		},
+		
+		"Move Speed Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Move Speed",
+				"2X Faster Move Speed",
+				"3X Faster Move Speed",
+				"4X Faster Move Speed",
+				"5X Faster Move Speed",
+				"10X Faster Move Speed"
+			]
+		},
+		
+		"Base Stat Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Stats",
+				"2X More Stats",
+				"3X More Stats",
+				"5X More Stats",
+				"10X More Stats"
+			]
+		},
+		
+		"Creep Camp Spawn Time": {
+			"type": "select",
+			"options":	[
+				"Default Creep Camp Spawn Time",
+				"45 Second Creep Camp Spawn Time",
+				"30 Second Creep Camp Spawn Time",
+				"15 Second Creep Camp Spawn Time",
+				"10 Second Creep Camp Spawn Time",
+				"5 Second Creep Camp Spawn Time",
+				"1 Second Creep Camp Spawn Time",
+				"Instant Creep Camp Spawn Time"
+			]
+		},
+		
+		"Creep Scaler": {
+			"type": "select",
+			"options":	[
+				"Normal Creep Power",
+				"2X Creep Power",
+				"3X Creep Power",
+				"5X Creep Power",
+				"10X Creep Power",
+				"15X Creep Power",
+				"25X Creep Power"
+			]
+		},
+		
+		"Building Scaler": {
+			"type": "select",
+			"options":	[
+				"Normal Building Power",
+				"2X Building Power",
+				"3X Building Power",
+				"5X Building Power",
+				"10X Building Power",
+				"15X Building Power",
+				"25X Building Power"
+			]
+		},
+		
+		//"Damage Multiplier": {
+		//	"type": "select",
+		//	"options":	[
+		//		"Normal Spell Damage",
+		//		"2X More Spell Damage",
+		//		"3X More Spell Damage",
+		//		"4X More Spell Damage",
+		//		"5X More Spell Damage",
+		//		"10X More Spell Damage",
+		//		"2X Less Spell Damage",
+		//		"3X Less Spell Damage",
+		//		"4X Less Spell Damage",
+		//		"5X Less Spell Damage",
+		//		"10X Less Spell Damage"
+		//	]
+		//},
+		
+		"Gold Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Starting Gold",
+				"2X More Starting Gold",
+				"3X More Starting Gold",
+				"4X More Starting Gold",
+				"5X More Starting Gold",
+				"10X More Starting Gold",
+				"25X More Starting Gold",
+				"50X More Starting Gold",
+				"100X More Starting Gold",
+				"No Starting Gold"
+			]
+		},
+		
+		"Gold Bounty Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal Gold Bounty",
+				"2X More Gold Bounty",
+				"3X More Gold Bounty",
+				"4X More Gold Bounty",
+				"5X More Gold Bounty",
+				"10X More Gold Bounty",
+				"No Gold Bounty"
+			]
+		},
+		
+		"XP Bounty Multiplier": {
+			"type": "select",
+			"options":	[
+				"Normal XP Bounty",
+				"2X More XP Bounty",
+				"3X More XP Bounty",
+				"4X More XP Bounty",
+				"5X More XP Bounty",
+				"10X More XP Bounty",
+				"No XP Bounty"
+			]
+		},
+		
+		"Starting Courier": {
+			"type": "select",
+			"options":	[
+				"Free Flying Courier",
+				"Free Waking Courier",
+				"No Free Starting Courier"
+			]
+		},
+		
+		"Starting Level": {
+			"type": "select",
+			"options":	[
+				"Start at Level 1",
+				"Start at Level 2",
+				"Start at Level 3",
+				"Start at Level 4",
+				"Start at Level 5",
+				"Start at Level 6",
+				"Start at Level 7",
+				"Start at Level 8",
+				"Start at Level 9",
+				"Start at Level 10",
+				"Start at Level 11",
+				"Start at Level 12",
+				"Start at Level 13",
+				"Start at Level 14",
+				"Start at Level 15",
+				"Start at Level 16",
+				"Start at Level 17",
+				"Start at Level 18",
+				"Start at Level 19",
+				"Start at Level 20",
+				"Start at Level 21",
+				"Start at Level 22",
+				"Start at Level 23",
+				"Start at Level 24",
+				"Start at Level 25"
+			]
+		},
+		
+		"Level Cap": {
+			"type": "select",
+			"options":	[
+				"Level Cap 25",
+				"Level Cap 6",
+				"Level Cap 11",
+				"Level Cap 16",
+				"Level Cap 50",
+				"Level Cap 75",
+				"Level Cap 100",
+				"Level Cap 150",
+				"Level Cap 250",
+				"Level Cap 500",
+				"Level Cap 750",
+				"Level Cap 1000",
+				"Level Cap 5000"
+			]
+		}
+	}
+}
