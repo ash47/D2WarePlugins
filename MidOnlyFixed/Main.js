@@ -131,7 +131,7 @@ var heroMap = {
 
 plugin.get('LobbyManager', function(obj){
 	lobbyManager = obj;
-	optionHero = lobbyManager.getOptionsForPlugin('MidOnly')['Hero'] || 'Any Hero';
+	optionHero = lobbyManager.getOptionsForPlugin('MidOnlyFixed')['Hero'] || 'Any Hero';
 });
 
 cvForceGameMode.setInt(11);
