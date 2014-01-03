@@ -126,7 +126,7 @@ var heroMap = {
 	"Tusk": "npc_dota_hero_tusk",
 	"Skywrath Mage": "npc_dota_hero_skywrath_mage",
 	"Elder Titan": "npc_dota_hero_elder_titan",
-    "Legion Commander": "npc_dota_hero_legion_commander",
+    //"Legion Commander": "npc_dota_hero_legion_commander",
     "Ember Spirit": "npc_dota_hero_ember_spirit",
     "Earth Spirit": "npc_dota_hero_earth_spirit"
 };
