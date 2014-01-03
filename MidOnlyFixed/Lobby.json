@@ -3,9 +3,9 @@
 {
 	// Those fields are displayed along the plugin name in the lobby browser
 	// For example, "Mid Only (Venomancer)"
-	"mainFields": ["Hero"], 
+	"mainFields": ["Hero"],
 	"fields": {
-	
+
 		// In the lobby creation dialog, this is going to be a dropdown with the label "Hero"
 		"Hero": {
 			"type": "select",
@@ -14,7 +14,7 @@
 				"All Random",
 				"Same Hero",
 				"Blue vs Pink",
-				
+
 				"Alchemist",
 				"Ancient Apparition",
 				"Anti-Mage",
@@ -41,7 +41,9 @@
 				"Dragon Knight",
 				"Drow Ranger",
 				"Earthshaker",
+				"Earth Spirit",
 				"Elder Titan",
+				"Ember Spirit",
 				"Enchantress",
 				"Enigma",
 				"Faceless Void",
@@ -52,6 +54,7 @@
 				"Juggernaut",
 				"Keeper of the Light",
 				"Kunkka",
+				"Legion Commander",
 				"Leshrac",
 				"Lich",
 				"Lifestealer",
