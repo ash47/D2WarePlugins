@@ -133,7 +133,8 @@ var heroMap = {
 
 plugin.get('LobbyManager', function(obj){
 	lobbyManager = obj;
-	optionHero = lobbyManager.getOptionsForPlugin('MidOnlyFixed')['Hero'] || 'Any Hero';
+    optionHeroRadiant = lobbyManager.getOptionsForPlugin('MidOnlyFixed')['HeroRadiant'] || 'Any Hero';
+	optionHeroDire = lobbyManager.getOptionsForPlugin('MidOnlyFixed')['HeroDire'] || 'Any Hero';
 });
 
 cvForceGameMode.setInt(11);
@@ -157,18 +158,25 @@ function onHeroPicked(client, clsname){
 		}
 	}
 
-	if(optionHero == "Any Hero") return;
-	if(optionHero == "All Random") return "random";
-	if(optionHero == "Same Hero") return blueHero;
-	if(optionHero == "Blue vs Pink"){
-		if(client.netprops.m_iTeamNum == dota.TEAM_RADIANT){
-			return blueHero;
-		}else{
-			return pinkHero;
-		}
-	}
+    if(client.netprops.m_iTeamNum == dota.TEAM_RADIANT){
+        if(optionHeroRadiant == "Any Hero") return;
+        if(optionHeroRadiant == "All Random") return "random";
+        if(optionHeroRadiant == "Same Hero") return blueHero;
+        if(optionHeroRadiant == "Blue"){
+            return blueHero;
+        }
 
-	return heroMap[optionHero];
+        return heroMap[optionHeroRadiant];
+    }else{
+        if(optionHeroDire == "Any Hero") return;
+        if(optionHeroDire == "All Random") return "random";
+        if(optionHeroDire == "Same Hero") return blueHero;
+        if(optionHeroDire == "Pink"){
+            return pinkHero;
+        }
+
+        return heroMap[optionHeroDire];
+    }
 }
 
 /*timers.setInterval(function(){
