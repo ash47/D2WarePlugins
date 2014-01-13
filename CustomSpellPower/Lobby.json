@@ -1,0 +1,68 @@
+{
+	"mainFields": ["Multiplier"],
+	"fields":
+	{
+		"Multiplier":
+		{
+			"type": "select",
+			"options":
+			[
+				"x3.0",
+				"x0.1",
+				"x0.5",
+				"x1.5",
+				"x2.0",
+				"x2.5",
+				"x4.0",
+				"x5.0",
+				"x10.0",
+				"x15.0",
+				"x25.0",
+				"x50.0",
+				"x100.0",
+				"x150.0",
+				"x250.0",
+				"x500.0",
+				"x1000.0",
+				"x2500.0",
+				"x5000.0",
+				"x7500.0",
+				"x10000.0"
+			]
+		},
+		"Spec":
+		{
+			"type": "select",
+			"options":
+			[
+				"Spells & Items",
+				"Spells & Items & Heroes",
+				"Items & Heroes",
+				"Spells & Heroes",
+				"Spells",
+				"Items",
+				"Heroes"
+			]
+		},
+		"Scale Shit":
+		{
+			"type": "select",
+			"options":
+			[
+				"Scale Buildings & Creeps",
+				"Scale Buildings",
+				"Scale Creeps",
+				"Don't Scale Buildings or Creeps"
+			]
+		},
+		"Skill Caps":
+		{
+			"type": "select",
+			"options":
+			[
+				"Enable Skill Caps",
+				"Don't Cap Skills"
+			]
+		}
+	}
+}
