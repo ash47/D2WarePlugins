@@ -1,6 +1,7 @@
 var capSkills = true;
 var scaleBuildings = true;
 var scaleCreeps = true;
+var fountainCamping = false;
 
 game.hook("Dota_OnGetAbilityValue", function(ability, abilityName, field, values) {
 	var fullName = abilityName + "." + field;
@@ -1041,7 +1042,54 @@ plugin.get("LobbyManager", function(lobbyManager)
 			scaleCreeps = false;
 		break;
 	}
+
+	// Disable Fountain Camping
+	switch(options['Fountain Camping']) {
+		case 'Disable Fountain Camping':
+			fountainCamping = false;
+		break;
+
+		case 'Enable Fountain Camping':
+			fountainCamping = true;
+		break;
+	}
 });
+
+// Check if fountain camping os iff
+if(!fountainCamping) {
+	game.hook('OnMapStart', function() {
+		// Find all fountains
+		var fountains = game.findEntitiesByClassname('ent_dota_fountain');
+
+		for(i=0; i<fountains.length; i++) {
+			var fountain = fountains[i];
+
+			// Give this fountain a MKB
+			var truestrike = dota.createAbility(fountain, "item_monkey_king_bar");
+			dota.addNewModifier(fountain, truestrike, "modifier_item_monkey_king_bar", "item_monkey_king_bar", {}, fountain);
+
+			// Give this fountain ursa's fury swipes
+			var swipes = dota.createAbility(fountain, 'ursa_fury_swipes');
+			for(j=0;j<4;j++) dota.upgradeAbility(swipes);
+			dota.addNewModifier(fountain, swipes, "modifier_ursa_fury_swipes", "ursa_fury_swipes", {}, fountain);
+
+			// Give this fountain SB's knock back
+			var bash = dota.createAbility(fountain, 'spirit_breaker_greater_bash');
+			for(j=0;j<4;j++) dota.upgradeAbility(bash);
+			dota.addNewModifier(fountain, bash, "modifier_spirit_breaker_greater_bash", "spirit_breaker_greater_bash", {}, fountain);
+
+			// Give this PSI Blades
+			var blades = dota.createAbility(fountain, 'templar_assassin_psi_blades');
+			for(j=0;j<4;j++) dota.upgradeAbility(blades);
+			dota.addNewModifier(fountain, blades, "modifier_templar_assassin_psi_blades", "templar_assassin_psi_blades", {}, fountain);
+		}
+
+		// Preload ursa's particles
+		dota.loadParticleFile('particles/units/heroes/hero_ursa.pcf');
+		dota.loadParticleFile('particles/units/heroes/hero_spirit_breaker.pcf');
+		dota.loadParticleFile('particles/units/heroes/hero_templar_assassin.pcf');
+	});
+}
 
 var msgPrinted = false;
 function onGameFrame()

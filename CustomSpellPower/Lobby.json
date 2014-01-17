@@ -49,10 +49,10 @@
 			"type": "select",
 			"options":
 			[
+				"Don't Scale Buildings or Creeps",
 				"Scale Buildings & Creeps",
 				"Scale Buildings",
-				"Scale Creeps",
-				"Don't Scale Buildings or Creeps"
+				"Scale Creeps"
 			]
 		},
 		"Skill Caps":
@@ -62,6 +62,15 @@
 			[
 				"Enable Skill Caps",
 				"Don't Cap Skills"
+			]
+		},
+		"Fountain Camping":
+		{
+			"type": "select",
+			"options":
+			[
+				"Disable Fountain Camping",
+				"Enable Fountain Camping"
 			]
 		}
 	}
