@@ -29,6 +29,72 @@ game.hook("Dota_OnGetAbilityValue", function(ability, abilityName, field, values
 			}
 		}
 
+		// Cogs
+		if(abilityName.indexOf('rattletrap_power_cogs') != -1) {
+			if(field.indexOf('radius') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 190) {
+						return 190;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('duration') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 8) {
+						return 8;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('drain_amount') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 200) {
+						return 200;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('attacks_to_destroy') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 3) {
+						return 3;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('push_length') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 252) {
+						return 252;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('push_speed') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 300) {
+						return 300;
+					}
+					return val;
+				});
+			}
+
+			if(field.indexOf('spacing') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 160) {
+						return 160;
+					}
+					return val;
+				});
+			}
+		}
+
 		// Magic Resistance
 		if(field.indexOf('bonus_spell_resist') != -1) {
 			newValues = newValues.map(function(val) {
