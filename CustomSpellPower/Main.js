@@ -1,3 +1,7 @@
+// Libraries
+var timers = require('timers');
+
+// Options
 var capSkills = true;
 var scaleBuildings = true;
 var scaleCreeps = true;
