@@ -72,6 +72,14 @@
 				"Disable Fountain Camping",
 				"Enable Fountain Camping"
 			]
+		},
+		"Starting Courier": {
+			"type": "select",
+			"options":	[
+				"Free Flying Courier",
+				"Free Waking Courier",
+				"No Free Starting Courier"
+			]
 		}
 	}
 }

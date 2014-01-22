@@ -3,6 +3,10 @@ var scaleBuildings = true;
 var scaleCreeps = true;
 var fountainCamping = false;
 
+// Free courier
+var freeCourier = false;
+var flyingCourier = false;
+
 game.hook("Dota_OnGetAbilityValue", function(ability, abilityName, field, values) {
 	var fullName = abilityName + "." + field;
 
@@ -98,16 +102,16 @@ game.hook("Dota_OnGetAbilityValue", function(ability, abilityName, field, values
 		// Magic Resistance
 		if(field.indexOf('bonus_spell_resist') != -1) {
 			newValues = newValues.map(function(val) {
-				if(val > 30) {
-					return 30;
+				if(val > 30*3) {
+					return 30*3;
 				}
 				return val;
 			});
 		}
 		if(field.indexOf('bonus_magical_armor') != -1) {
 			newValues = newValues.map(function(val) {
-				if(val > 15) {
-					return 15;
+				if(val > 15*3) {
+					return 15*3;
 				}
 				return val;
 			});
@@ -1086,6 +1090,24 @@ plugin.get("LobbyManager", function(lobbyManager)
 		break;
 	}
 
+	// Grab Courier option
+	switch(options['Starting Courier']) {
+		case 'Free Flying Courier':
+			freeCourier = true;
+			flyingCourier = true;
+		break;
+
+		case 'Free Waking Courier':
+			freeCourier = true;
+			flyingCourier = false;
+		break;
+
+		case 'No Free Courier':
+			freeCourier = false;
+			flyingCourier = false;
+		break;
+	}
+
 	// Scaling of other shit
 	switch(options['Scale Shit']) {
 		case 'Scale Buildings & Creeps':
@@ -1156,6 +1178,51 @@ if(!fountainCamping) {
 		dota.loadParticleFile('particles/units/heroes/hero_templar_assassin.pcf');
 	});
 }
+
+// Free couriers
+var gottenCouriers = {};
+game.hook("Dota_OnHeroSpawn", function(hero) {
+	// Check if players should get a free courier
+	if(freeCourier) {
+		// We have to wait a moment before giving the courier
+		timers.setTimeout(function() {
+			// Check if the hero is valid
+			if(!hero || !hero.isValid()) return;
+
+			// Check if we've already gotten a courier
+			if(gottenCouriers[hero.netprops.m_iTeamNum]) return;
+
+			// Check if this hero has space
+			var hasSpace = false;
+			for(var i=0; i<6; i++) {
+				if(hero.netprops.m_hItems[i] == null) {
+					hasSpace = true;
+					break;
+				}
+			}
+
+			// Only a hero with space can do this
+			if(!hasSpace) return;
+
+			// Spawn a courier
+			var item = dota.giveItemToHero('item_courier', hero);
+
+			dota.executeOrders(hero.netprops.m_iPlayerID, dota.ORDER_TYPE_CAST_ABILITY_NO_TARGET, [hero], null, item, false, {x:0, y:0, z:0});
+
+			// Stop sellage
+			item.netprops.m_bSellable = 0;
+
+			// Upgrade it
+			if(flyingCourier) {
+				item = dota.giveItemToHero('item_flying_courier', hero);
+				item.netprops.m_bSellable = 0;
+			}
+
+			// Store that this team now has a courier
+			gottenCouriers[hero.netprops.m_iTeamNum] = true;
+		}, 1000);
+	}
+});
 
 var msgPrinted = false;
 function onGameFrame()
