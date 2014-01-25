@@ -25,7 +25,7 @@ var banMeepo = false;
 // Load lobby settings
 plugin.get("LobbyManager", function(lobbyManager) {
     // Grab the options
-    var options = lobbyManager.getOptionsForPlugin("RandomOMG");
+    var options = lobbyManager.getOptionsForPlugin("RandomSkills");
     //var options = lobbyManager.getOptionsForPlugin("collection");
 
     // The game mode
