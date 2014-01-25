@@ -1,0 +1,37 @@
+{
+	"mainFields": ["Mode"],
+	"fields": {
+		"Mode": {
+			"type": "select",
+			"options":	[
+				"Classic",
+				"New Skills On Death"
+			]
+		},
+		"Number of Slots": {
+			"type": "select",
+			"options":	[
+				"Use 4 Slots",
+				"Use 1 Slot",
+				"Use 2 Slots",
+				"Use 3 Slots",
+				"Use 4 Slots",
+				"Use 5 Slots",
+				"Use 6 Slots"
+			]
+		},
+		"Number of Ults": {
+			"type": "select",
+			"options":	[
+				"1 Ult",
+				"No Ults",
+				"1 Ult",
+				"2 Ults",
+				"3 Ults",
+				"4 Ults",
+				"5 Ults",
+				"6 Ults"
+			]
+		}
+	}
+}
