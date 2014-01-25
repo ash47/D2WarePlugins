@@ -29,8 +29,76 @@ game.hook("Dota_OnGetAbilityValue", function(ability, abilityName, field, values
 		if(abilityName.indexOf('dark_seer_ion_shell') != -1) {
 			if(field.indexOf('radius') != -1) {
 				newValues = newValues.map(function(val) {
-					if(val > 250) {
-						return 250;
+					if(val > 500) {
+						return 500;
+					}
+					return val;
+				});
+			}
+		}
+
+		// Edict
+		if(abilityName.indexOf('leshrac_diabolic_edict') != -1) {
+			if(field.indexOf('radius') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 500) {
+						return 500;
+					}
+					return val;
+				});
+			}
+			if(field.indexOf('num_explosions') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 32) {
+						return 32;
+					}
+					return val;
+				});
+			}
+		}
+
+		// Shrapnel
+		if(abilityName.indexOf('sniper_shrapnel') != -1) {
+			if(field.indexOf('radius') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 400) {
+						return 400;
+					}
+					return val;
+				});
+			}
+			if(field.indexOf('slow_movement_speed') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val < -30) {
+						return -30;
+					}
+					return val;
+				});
+			}
+		}
+
+		// Enigma
+		if(abilityName.indexOf('enigma_midnight_pulse') != -1) {
+			if(field.indexOf('radius') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 400) {
+						return 400;
+					}
+					return val;
+				});
+			}
+			if(field.indexOf('damage_percent') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 7) {
+						return 7;
+					}
+					return val;
+				});
+			}
+			if(field.indexOf('duration') != -1) {
+				newValues = newValues.map(function(val) {
+					if(val > 8) {
+						return 8;
 					}
 					return val;
 				});

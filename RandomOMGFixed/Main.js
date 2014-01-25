@@ -8,8 +8,8 @@ var gottenNewSkills = {}
 // Hook spawning
 game.hook("Dota_OnHeroSpawn", function(hero) {
     if(!hero) return;
-    if(gottenNewSkills[hero]) return;
-    gottenNewSkills[hero] = true;
+    if(hero.gottenSkills) return;
+    hero.gottenSkills = true;
 
     // Remove all starting abilities
     for(var i=0; i<16; i++) {
@@ -29,8 +29,10 @@ game.hook("Dota_OnHeroSpawn", function(hero) {
         dota.setAbilityByIndex(hero, ab, slot);
 
         // Add to the missing skills
-        var deps = abDeps[name].SubAbilities;
-        if(deps) missingSkills = missingSkills.concat(deps);
+        if(abDeps[name]) {
+            var deps = abDeps[name].SubAbilities;
+            if(deps) missingSkills = missingSkills.concat(deps);
+        }
     }
 
     // Give 3 normal skills
