@@ -22,6 +22,9 @@ var cvForceGameMode = console.findConVar("dota_force_gamemode");
 var banSilencer = true;
 var banMeepo = false;
 
+// Hero Selection
+var selectHeroes = true
+
 // Load lobby settings
 plugin.get("LobbyManager", function(lobbyManager) {
     // Grab the options
@@ -29,6 +32,17 @@ plugin.get("LobbyManager", function(lobbyManager) {
     //var options = lobbyManager.getOptionsForPlugin("collection");
 
     // The game mode
+    switch(options["Hero Selection"]) {
+        case "Pick Heroes":
+            selectHeroes = true;
+        break;
+
+        case "Random Heroes":
+            selectHeroes = false;
+        break;
+    }
+
+    // The hero selection type
     switch(options["Mode"]) {
         case "Classic":
             newSkillsOnDeath = false;
@@ -116,6 +130,15 @@ game.hook("Dota_OnHeroSpawn", function(hero) {
 
     // Give this hero new skills
     giveHeroNewSkills(hero);
+});
+
+// Hook hero selection
+game.hook("Dota_OnHeroPicked", function(client, heroName) {
+    // If there is no hero selection
+    if(!selectHeroes) {
+        // Force them to random
+        return 'random';
+    }
 });
 
 function giveHeroNewSkills(hero) {

@@ -8,6 +8,13 @@
 				"New Skills On Death"
 			]
 		},
+		"Hero Selection": {
+			"type": "select",
+			"options":	[
+				"Pick Heroes",
+				"Random Heroes"
+			]
+		},
 		"Number of Slots": {
 			"type": "select",
 			"options":	[
