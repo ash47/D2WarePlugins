@@ -6,6 +6,7 @@ var abDeps = keyvalue.parseKVFile("abilityDeps.kv");
 var abList = keyvalue.parseKVFile("abilities.kv");
 var abInfo = keyvalue.parseKVFile('npc_abilities.kv').DOTAAbilities;
 var heroesKV = keyvalue.parseKVFile('npc_heroes.kv').DOTAHeroes;
+var combos = keyvalue.parseKVFile('combos.kv').Combos;
 
 // Vars
 var newSkillsOnDeath = false;   // An option to give new skills when a player dies
@@ -163,6 +164,7 @@ function giveHeroNewSkills(hero) {
     // Change ability points
     hero.netprops.m_iAbilityPoints = abPoints;
 
+    var skillList = {};
     var missingSkills = [];
     function addSkill(name, slot) {
         // Load dependencies
@@ -177,6 +179,9 @@ function giveHeroNewSkills(hero) {
             var deps = abDeps[name].SubAbilities;
             if(deps) missingSkills = missingSkills.concat(deps);
         }
+
+        // Store that we loaded t his skill
+        skillList[name] = true;
     }
 
     // Workout how many normal skills to give
@@ -202,8 +207,28 @@ function giveHeroNewSkills(hero) {
     for(var i=0;i<numberOfUlts;i++) {
         // Find a unique skill
         do {
+            // Pick a random skillname
             skillName = abList.Ults.random()
-        } while(gottenSkills[skillName]);
+
+            // Check for combos
+            for(var j=0; j<combos.length; j++) {
+                // Grab the combo
+                var s = combos[j];
+
+                // Check if it's invalid
+                if(skillName == s[1] && !skillList[s[0]]) {
+                    // Grab a new skill
+                    skillName = null;
+                    break;
+                }
+
+                // Try to find a valid combo
+                if(gottenSkills[s[0]] && !gottenSkills[s[1]]) {
+                    skillName = s[1];
+                    break;
+                }
+            }
+        } while(skillName == null && gottenSkills[skillName]);
         gottenSkills[skillName] = true;
 
         // Add the skill
